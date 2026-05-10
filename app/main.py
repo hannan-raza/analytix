@@ -34,3 +34,8 @@ app.include_router(query.router)
 @app.get("/")
 def root():
     return {"message": "Analtix API is running", "docs": "/docs"}
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
