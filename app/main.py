@@ -11,6 +11,7 @@ from app.models import user, product, order  # registers tables with SQLAlchemy
 from app.routes import user as user_routes
 from app.routes import product as product_routes
 from app.routes import order as order_routes
+from app.routes import analytics as analytics_routes
 
 app = FastAPI(title="Analtix")
 
@@ -29,6 +30,7 @@ app.include_router(product_routes.router)
 app.include_router(order_routes.router)
 app.include_router(auth.router)
 app.include_router(query.router)
+app.include_router(analytics_routes.router)
 
 
 @app.get("/")
