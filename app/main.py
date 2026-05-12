@@ -13,7 +13,7 @@ from app.routes import product as product_routes
 from app.routes import order as order_routes
 from app.routes import analytics as analytics_routes
 
-app = FastAPI(title="Analtix")
+app = FastAPI(title="Analytix")
 
 app.add_middleware(
     CORSMiddleware,
@@ -35,7 +35,7 @@ app.include_router(analytics_routes.router)
 
 @app.get("/")
 def root():
-    return {"message": "Analtix API is running", "docs": "/docs"}
+    return {"message": "Analytix API is running", "docs": "/docs"}
 
 
 @app.get("/health")
